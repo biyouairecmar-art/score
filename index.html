@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#294898">
+  <title>サロまる HPBページ分析</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="brand"><span>S</span>サロまる</div>
+      <p class="eyebrow">HPBページ無料分析</p>
+      <h1>予約が入る理由を、<br>ページ全体から読み解く。</h1>
+      <p class="lead">写真、トップキャッチ、口コミ、クーポン、検索導線を確認し、強みと改善点をPDFにまとめてお送りします。</p>
+      <p class="scopeNote">公開ページだけを機械的に点数化するのではなく、実際の見え方を一店舗ずつ確認します。</p>
+    </section>
+
+    <section id="requestPanel" class="panel requestPanel">
+      <p class="sectionEyebrow">無料で申し込む</p>
+      <h2>店舗のHPB URLを<br>入力してください。</h2>
+      <p class="panelLead">入力後に表示される文章をコピーし、LINEへ送信すると受付完了です。</p>
+      <label for="url">ホットペッパービューティーのサロンURL</label>
+      <div class="inputRow">
+        <input id="url" type="url" inputmode="url" autocomplete="url" placeholder="https://beauty.hotpepper.jp/slnH000000000/">
+        <button id="analyze" type="button">分析を依頼する</button>
+      </div>
+      <p id="error" class="formError hidden" role="alert"></p>
+      <p class="hint">LINEへの送信が完了すると受付完了です。無理な勧誘はありません。</p>
+    </section>
+
+    <section id="requestComplete" class="requestComplete hidden" aria-live="polite">
+      <p class="sectionEyebrow">分析依頼</p>
+      <h2>診断結果をPDFで<br>お送りします。</h2>
+      <p class="completeLead">下の文章をコピーして、LINEへ送信してください。店舗ページを確認後、分析結果をお送りします。</p>
+
+      <div class="messageBox">
+        <p class="messageLabel">LINEで送る文章</p>
+        <pre id="requestMessage"></pre>
+      </div>
+
+      <div class="completeActions">
+        <button id="copyMessage" class="copyButton" type="button">文章をコピー</button>
+        <a id="openLine" class="lineButton" href="https://lin.ee/wsSsxxM" target="_blank" rel="noopener">LINEを開く</a>
+      </div>
+      <p id="copyStatus" class="copyStatus" aria-live="polite"></p>
+      <button id="editUrl" class="textButton" type="button">URLを修正する</button>
+
+      <div class="afterSend">
+        <h3>送信後の流れ</h3>
+        <ol>
+          <li>LINEで「診断結果希望」と店舗URLを送信</li>
+          <li>ページの強みと改善点を確認</li>
+          <li>診断結果をPDFでお届け</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="criteria serviceDetails">
+      <p class="sectionEyebrow">PDFで確認すること</p>
+      <h2>「何が悪いか」だけでなく、<br>「何から直すか」まで。</h2>
+      <div class="serviceGrid">
+        <article>
+          <span>01</span>
+          <h3>予約理由</h3>
+          <p>トップ写真、キャッチ、スタイル、口コミ、クーポンが一つの理由につながっているか。</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>選びやすさ</h3>
+          <p>入口クーポン、価格、並び方から、お客様が迷わず予約できる状態か。</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>改善順位</h3>
+          <p>表面的な修正ではなく、予約への影響が大きい順に改善点を整理します。</p>
+        </article>
+      </div>
+      <p class="serviceNote">競合ページ、エリア相場、検索ワードまで含む詳細分析が必要な場合は、診断結果をご確認後にご相談いただけます。</p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
